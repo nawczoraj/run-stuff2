@@ -19,4 +19,5 @@ p.stdout.close()
 p.wait()
 subprocess._cleanup()
 if "unclosed event loop" in data:
+    print(data, file=sys.stderr)
     raise SystemExit(1)

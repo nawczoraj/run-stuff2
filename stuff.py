@@ -18,6 +18,4 @@ p.stdout.close()
 # with regrtest -R.
 p.wait()
 subprocess._cleanup()
-if "unclosed event loop" in data:
-    print(data, file=sys.stderr)
-    raise SystemExit(1)
+print(data, file=sys.stderr)

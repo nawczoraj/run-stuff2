@@ -44,4 +44,4 @@ jobs:
     - name: Run stuff
       run: |
         set -euxo pipefail
-        uv run stuff.py
+        uv run --python=python${{ matrix.python }} stuff.py
